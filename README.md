@@ -13,24 +13,24 @@ A social media photo sharing app like Instagram, emulating its core features and
 9. Add/Delete/Like Comments
 
 # Technology Stack
-Backend - Java 8, Spring Boot
-API Gateway - Spring
-Discovery - Spring Eureka
-Events - Kafka
-Authentication - OAuth2
-Frontend - React, Bootstrap
-Database - MongoDB
-Caching - Redis
-Montioring - Splunk, Prometheus, Grafana, Sentry
-Hosting - AWS
+* Backend - Java 8, Spring Boot
+* API Gateway - Spring
+* Discovery - Spring Eureka
+* Events - Kafka
+* Authentication - OAuth2
+* Frontend - React, Bootstrap
+* Database - MongoDB
+* Caching - Redis
+* Montioring - Splunk, Prometheus, Grafana, Sentry
+* Hosting - AWS
 
 # Microservices
-User Service
-Post Service
-Media Service
-Comment Service
-Notification Service
-Graph Service
+* User Service
+* Post Service
+* Media Service
+* Comment Service
+* Notification Service
+* Search Service
 
 # Seperation of Concern in Post and Media Service
 Given that media is a central part of Instagram-like apps, I will practise separation of concerns to keep services more modular and easier to scale in the future.
@@ -39,13 +39,13 @@ The Post Service would still be responsible for the business logic of creating p
 
 Here’s how the interaction would work:
 
-Post Service:
+** Post Service:** 
 When a user creates a post, they upload media (e.g., an image or video).
 The Post Service sends the media file to the Media Service to be uploaded and stored (possibly to a cloud storage like AWS S3 or Google Cloud Storage).
 The Media Service responds with a URL or identifier for the uploaded media file.
 The Post Service then creates a new post entry in the database (MongoDB), storing the metadata (e.g., caption, timestamp) along with the media file URL or media ID returned by the Media Service.
 
-Media Service:
+** Media Service:** 
 Handles media upload and retrieval (using cloud storage, CDN, etc.).
 Might include media processing logic (e.g., resizing images or compressing videos).
 
@@ -59,7 +59,7 @@ When users view the post, the Post Service fetches the post data (including the 
 # Role of the API Gateway
 I will be using Spring Cloud Gateway for cross-service tasks like:
 
-1. Path-Based Routing : I will configure Spring Cloud Gateway to route HTTP requests to different backend services based on the request path. For example, if the incoming request is /users/**, it could be forwarded to a User Service, and if the request is /posts/**, it could go to a Post Service.
+1. Path-Based Routing : I will configure Spring Cloud Gateway to route HTTP requests to different backend services based on the request path. For example, if the incoming request is /users/, it could be forwarded to a User Service, and if the request is /posts/, it could go to a Post Service.
 
 2. Filters : I will add filters to modify requests or responses, for things like authentication, logging and rate limiting. I can modify headers (e.g., adding authentication tokens to requests) and transform response bodies before they are sent back to the client (e.g., change formats, mask sensitive information).
 
@@ -90,4 +90,4 @@ I have chosen MongoDB for its flexibilty and scalibilty to handling unstructured
 3. Ensure MongoDB replication is set up with multiple nodes - For high availability.
 
 # User Management considerations
-1. I will implement roles such as Admin, User, Moderator with appropriate access control policies. The API Gateway will extract the role and permission claims from the JWT token and ensure proper access control for each route. Spring Security’s method-level security annotations (@PreAuthorize) are helpful for this.
+I will implement roles such as Admin, User, Moderator with appropriate access control policies. The API Gateway will extract the role and permission claims from the JWT token and ensure proper access control for each route. Spring Security’s method-level security annotations (@PreAuthorize) are helpful for this.
