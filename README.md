@@ -31,6 +31,7 @@ User Service
 Post Service
 Comment Service
 Notification Service
+Graph Service
 
 # Role of the API Gateway
 I will be using Spring Cloud Gateway for cross-service tasks like:
@@ -39,10 +40,13 @@ I will be using Spring Cloud Gateway for cross-service tasks like:
 
 2. Filters : I will add filters to modify requests or responses, for things like authentication, logging and rate limiting. I can modify headers (e.g., adding authentication tokens to requests) and transform response bodies before they are sent back to the client (e.g., change formats, mask sensitive information).
 
-3. Authentication and Authorization : I will integrate Spring Security with Spring Cloud Gateway to centralize authentication and authorization logic at the API Gateway level. This means clients don’t need to authenticate separately with each microservice, reducing duplication of security logic across services. Spring Cloud Gateway can validate JWT tokens or perform OAuth2 authentication, ensuring that only authenticated users can access your services. CORS configuration can be managed centrally in the API Gateway. This allows the Gateway to handle cross-origin requests, ensuring that clients from different domains can securely interact with my microservices.
+3. Authentication and Authorization : Once the user is authenticated, Spring Cloud Gateway will validate the JWT or OAuth2 token on each request. If the token is valid, it will forward the request to the appropriate microservice.
+The backend microservices themselves  will not  handle user authentication. They will rely on the authentication information (e.g., user ID, roles, claims) passed through the header by the gateway.
 
-4. API rate limiting.
+4. CORS configuration will be managed centrally in the API Gateway. This allows the Gateway to handle cross-origin requests, ensuring that clients from different domains can securely interact with my microservices.
 
-5. Routing by HTTP Method:  I will routes incoming requests to different microservices based on predicates (like path, headers, etc.) and uses service discovery for dynamic routing.
+5. API rate limiting.
 
-6. Metrics and Logging: I plan to track the performance and health of my microservices via Spring Cloud Gateway's integration with Micrometer and centralized logging tools.
+6. Routing by HTTP Method:  I will routes incoming requests to different microservices based on predicates (like path, headers, etc.) and uses service discovery for dynamic routing.
+
+7. Metrics and Logging: I plan to track the performance and health of my microservices via Spring Cloud Gateway's integration with Micrometer and centralized logging tools.
