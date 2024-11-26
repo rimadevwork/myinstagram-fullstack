@@ -21,12 +21,6 @@ Caching - Redis
 Montioring - Splunk, Prometheus, Grafana, Sentry
 Hosting - AWS
 
-# Deployment Plan
-Host frontend on platforms like Vercel or Netlify.
-Deploy backend API on Heroku, AWS, or DigitalOcean.
-Use a cloud storage service (like AWS S3) to host user-uploaded files (images and videos).
-Implement fault tolerance. Consider using Spring Cloud Circuit Breaker (with Resilience4J) to prevent cascading failures between services.
-
 # Microservices
 User Service
 Post Service
