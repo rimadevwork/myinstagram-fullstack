@@ -14,11 +14,17 @@ A social media photo sharing app like Instagram, emulating its core features and
 
 # Technology Stack
 Backend - Java 8, Spring, Node.js
+
 Frontend - React, Bootstrap
+
 Messaging - Kafka
+
 Database - MongoDB, Cassandra
+
 Caching - Redis
+
 Montioring - Splunk, Prometheus, Grafana, Sentry
+
 Hosting - AWS
 
 # Microservices
