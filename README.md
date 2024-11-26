@@ -1,5 +1,6 @@
 # Description
-A social media photo sharing app like Instagram, emulating its core features and functionalities. This is for my own understanding and learning.
+A social media photo sharing app like Instagram, emulating its core features and functionalities. The aim is to demonstrate containerized microservices and cloud-native architectures. We will use 
+Eureka for service discovery, Spring for API Gateway, Spring Boot for microservices, and Kafka for event-driven communication.
 
 # Core Feautres
 1. User Creation and Authentication - register, login, logout - JWT/OAuth
