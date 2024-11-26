@@ -8,7 +8,7 @@ A social media photo sharing app like Instagram, emulating its core features and
 4. Delete Post
 5. Like Post
 6. Search Users and Posts
-7. Follow Users
+7. Follow/Unfollow Users
 8. User specific feed
 9. Add/Delete/Like Comments
 
@@ -25,13 +25,39 @@ Hosting - AWS
 Host frontend on platforms like Vercel or Netlify.
 Deploy backend API on Heroku, AWS, or DigitalOcean.
 Use a cloud storage service (like AWS S3) to host user-uploaded files (images and videos).
+Implement fault tolerance. Consider using Spring Cloud Circuit Breaker (with Resilience4J) to prevent cascading failures between services.
 
 # Microservices
 User Service
 Post Service
+Media Service
 Comment Service
 Notification Service
 Graph Service
+
+# Seperation of Concern in Post and Media Service
+Given that media is a central part of Instagram-like apps, I will practise separation of concerns to keep services more modular and easier to scale in the future.
+
+The Post Service would still be responsible for the business logic of creating posts, storing metadata (e.g., caption, tags), and associating media files with posts. The Media Service would be responsible for handling the actual media content (e.g., images, videos).
+
+Here’s how the interaction would work:
+
+Post Service:
+When a user creates a post, they upload media (e.g., an image or video).
+The Post Service sends the media file to the Media Service to be uploaded and stored (possibly to a cloud storage like AWS S3 or Google Cloud Storage).
+The Media Service responds with a URL or identifier for the uploaded media file.
+The Post Service then creates a new post entry in the database (MongoDB), storing the metadata (e.g., caption, timestamp) along with the media file URL or media ID returned by the Media Service.
+
+Media Service:
+Handles media upload and retrieval (using cloud storage, CDN, etc.).
+Might include media processing logic (e.g., resizing images or compressing videos).
+
+Example Flow:
+User uploads a post with a media file.
+Post Service calls the Media Service to upload the media.
+Media Service uploads the file to cloud storage and returns a URL or media ID.
+Post Service creates a post entry in MongoDB with the media URL and metadata (e.g., user, caption).
+When users view the post, the Post Service fetches the post data (including the media URL) and displays it.
 
 # Role of the API Gateway
 I will be using Spring Cloud Gateway for cross-service tasks like:
@@ -50,3 +76,21 @@ The backend microservices themselves  will not  handle user authentication. They
 6. Routing by HTTP Method:  I will routes incoming requests to different microservices based on predicates (like path, headers, etc.) and uses service discovery for dynamic routing.
 
 7. Metrics and Logging: I plan to track the performance and health of my microservices via Spring Cloud Gateway's integration with Micrometer and centralized logging tools.
+
+8. Caching: Use Redis to cache frequent queries (e.g., user profile or posts) and reduce the load on your backend services.
+
+# Global Search Approach 
+I will be using MongoDB Full-Text Search to keep it simple for now. The plan is to integrate ElasticSearch and synchronize MongoDB data with ElasticSearch.
+
+# Tracking Followers/Following Approac
+1. Use Redis as a caching layer to store and quickly access follow relationships, while MongoDB stores the persistent user data. Also, create a follows collection in MongoDB to represent each follow relationship. 
+2. A graph database such as Neo4j might be a good option for highly complex social graph relationships and fast lookups for queries like mutual followers, recommendations, or friendship paths.
+   
+# Database Considerations
+I have chosen MongoDB for its flexibilty and scalibilty to handling unstructured data like posts and user profiles. Things to consider:
+1. Avoid large, deeply nested documents.
+2. Add indexes on frequently queried fields (e.g., userId in posts, postId in comments).
+3. Ensure MongoDB replication is set up with multiple nodes - For high availability.
+
+# User Management considerations
+1. I will implement roles such as Admin, User, Moderator with appropriate access control policies. The API Gateway will extract the role and permission claims from the JWT token and ensure proper access control for each route. Spring Security’s method-level security annotations (@PreAuthorize) are helpful for this.
