@@ -19,7 +19,7 @@ Frontend - React, Bootstrap
 
 Messaging - Kafka
 
-Database - MongoDB, Cassandra
+Database - MongoDB
 
 Caching - Redis
 
