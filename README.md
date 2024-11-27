@@ -89,5 +89,8 @@ I have chosen MongoDB for its flexibilty and scalibilty to handling unstructured
 2. Add indexes on frequently queried fields (e.g., userId in posts, postId in comments).
 3. Ensure MongoDB replication is set up with multiple nodes - For high availability.
 
+# Frontend Considerations
+React will be used to build the user interface (UI). The frontend interacts with the backend via the API Gateway using RESTful APIs. I am using React Router for client-side navigation and Axios/Fetch for making HTTP requests to the backend.
+
 # User Management considerations
 I will implement roles such as Admin, User, Moderator with appropriate access control policies. The API Gateway will extract the role and permission claims from the JWT token and ensure proper access control for each route. Spring Security’s method-level security annotations (@PreAuthorize) are helpful for this.
