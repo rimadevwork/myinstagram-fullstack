@@ -14,15 +14,15 @@ A social media photo sharing app like Instagram, emulating its core features and
 
 # Technology Stack
 * Backend - Java 8, Spring Boot
-* API Gateway - Spring
-* Discovery - Spring Eureka
-* Events - Kafka
+* API Gateway - Spring Cloud Gateway
+* Discovery - Spring Eureka Discovery Service
+* Event Orchestration/SAGA - Kafka
 * Authentication - OAuth2
 * Frontend - React, Bootstrap
 * Database - MongoDB
 * Caching - Redis
 * Montioring - Splunk, Prometheus, Grafana, Sentry
-* Hosting - AWS
+* Hosting - AWS ??
 
 # Microservices
 * User Service
