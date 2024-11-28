@@ -22,7 +22,7 @@ A social media photo sharing app like Instagram, emulating its core features and
 * Database - MongoDB
 * Caching - Redis
 * Montioring - Splunk, Prometheus, Grafana, Sentry
-* Hosting - AWS ??
+* Logging - SLf4J + LogBack, Splunk
 
 # Microservices
 * User Service
