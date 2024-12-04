@@ -27,7 +27,7 @@ A social media photo sharing app like Instagram, emulating its core features and
 # Microservices
 * API Gatewar Service
 * Eureka Discovery Service
-* User Service
+* User Service - exposes REST endpoints for registering, editing and authenticating users.
 * Post Service
 * Media Service
 * Comment Service
