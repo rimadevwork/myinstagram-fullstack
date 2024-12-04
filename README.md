@@ -95,9 +95,14 @@ MongoDB is schema-less, which means you can start saving data to it without defi
 
 # Secure Protocol
 I will hash the passwords using a strong hashing algorithm like BCrypt. BCrypt automatically handles the salting and the complexity of the hashing process, ensuring that each password is securely hashed before storing it in the database.
-However, when the React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords.
-Thats why I will configure the Spring Boot apps to use HTTPS for secure communication by configuring SSL in your application.properties. I will generate a self-signed certificate for development purposes, in production, we should use a certificate signed by a trusted certificate authority (CA). I should also ensure that all HTTP traffic is redirected to HTTPS.
-I should also ensure HTTPS on the React side: When making API calls from React app, I will use https:// in the URL. 
+However, when the React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. So I need to ensure following:
+1. Enabling SSL in the application.properties or application.yml of each microservice.
+2. Redirecting HTTP traffic to HTTPS, if you want to ensure that users can only access your services via secure channels.
+3. Generate a self-signed certificate for development purposes. When developing locally, your browser or client may show a warning. For production, you should use a valid SSL certificate issued by a trusted certificate authority (CA) to avoid this.
+4. Use HSTS to enforce HTTPS in the browser.
+5. In your React client, ensure all URLs are https://.
+
+Note: The API Gateway is the entry point for all client requests to your system. We must secure it with HTTPS as well. Although the Eureka Discovery Server typically doesn't serve sensitive data (it's primarily for service registration and discovery), it should still use HTTPS. The connection between the services and Eureka should be secure. Services should register and fetch metadata over HTTPS to ensure that no sensitive information (e.g., credentials) is sent over unencrypted channels. If all your microservices and the API Gateway use HTTPS, the Eureka server should also be configured to maintain a uniform security posture.
 
 
 # Frontend Considerations
