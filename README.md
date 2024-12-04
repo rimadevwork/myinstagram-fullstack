@@ -95,7 +95,10 @@ MongoDB is schema-less, which means you can start saving data to it without defi
 
 # Secure Protocol
 I will hash the passwords using a strong hashing algorithm like BCrypt. BCrypt automatically handles the salting and the complexity of the hashing process, ensuring that each password is securely hashed before storing it in the database.
-However, when the React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. So I need to ensure following:
+Password Hashing & Salt: Passwords are not stored in plain text but are hashed (typically with bcrypt or PBKDF2) along with a unique salt for each user. This ensures that even if the database is compromised, the passwords remain secure.
+
+However, when the React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. 
+So I need to ensure following:
 1. Enabling SSL in the application.properties or application.yml of each microservice.
 2. Redirecting HTTP traffic to HTTPS, if you want to ensure that users can only access your services via secure channels.
 3. Generate a self-signed certificate for development purposes. When developing locally, your browser or client may show a warning. For production, you should use a valid SSL certificate issued by a trusted certificate authority (CA) to avoid this.
@@ -112,9 +115,41 @@ Decoupling from Natural Keys: Using UUIDs avoids relying on mutable or sensitive
 Ease of Integration: UUIDs make it easier to integrate with external systems, APIs, or services that require unique identifiers.
 Non-Sequential IDs: Unlike database-generated IDs (e.g., auto-increment integers), UUIDs are harder to predict, adding a layer of security for APIs where IDs are exposed.
 
-
 UUID.randomUUID() generates a UUID using a random number generator. For UUID version 4, the collision probability is extremely low due to the large size of the UUID (128 bits). It has around 2^122 possible combinations, which makes the chance of a collision negligible. However, to ensure that UUID collisions are impossible, we will create a unique index in your MongoDB collection: db.users.createIndex({ uuid: 1 }, { unique: true });
 
+# Custom Exceptions
+I will create custom exceptions for different error scenarios. For instance:
+1. UserNotFoundException for cases when the user is not found during login or other operations.
+2. InvalidPasswordException for failed authentication due to incorrect passwords.
+3. AccountLockedException for cases where the user’s account is temporarily locked due to failed login attempts.
+4. EmailAlreadyTakenException for duplicate email errors during signup.
+
+HTTP Status Codes: The app uses appropriate HTTP status codes for different error scenarios:
+* 400 Bad Request for validation errors.
+* 401 Unauthorized for failed login attempts.
+* 404 Not Found when a user or resource is not found.
+* 500 Internal Server Error for unexpected issues.
+
+**Flow of HTTP Status Codes from the Backend to the React UI:**
+Step 1: Backend API Service (User Service) Response:
+When the User Service (or any other service) handles a request, it returns an HTTP response with a status code (e.g., 200 OK, 404 Not Found, 500 Internal Server Error) and the body (containing data or error messages).
+For example:
+200 OK indicates success and might return user data.
+404 Not Found indicates that the user was not found.
+401 Unauthorized indicates failed authentication.
+500 Internal Server Error indicates something went wrong on the server.
+
+Step 2: API Gateway:
+The API Gateway routes requests to the appropriate backend service (e.g., User Service).
+While the API Gateway may provide some additional functionality, such as authentication, rate limiting, or caching, it doesn't typically modify HTTP status codes unless you implement custom logic. It simply forwards the status code and the response body to the frontend.
+
+Step 3: React UI:
+React makes HTTP requests (e.g., via fetch or axios) to the backend API (through the API Gateway).
+React then checks the HTTP status code in the response and updates the UI accordingly.
+You can handle different HTTP status codes in the frontend and display appropriate UI messages or handle actions accordingly.
+
+**Global Error Handler:**
+A global error handler (via @ControllerAdvice in Spring or similar frameworks) is often used to catch exceptions across the app and return a standardized error response. This improves error consistency and helps handle issues like missing parameters or unhandled exceptions in a uniform way. The global error handler in a microservices-based architecture typically resides within each individual service, rather than in one centralized service. This allows each service to handle its specific exceptions and return appropriate error responses based on the context of the request.
 
 # Frontend Considerations
 React will be used to build the user interface (UI). The frontend interacts with the backend via the API Gateway using RESTful APIs. I am using React Router for client-side navigation and Axios/Fetch for making HTTP requests to the backend.
