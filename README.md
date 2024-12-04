@@ -104,6 +104,17 @@ However, when the React client sends the password to the backend, it will be in 
 
 Note: The API Gateway is the entry point for all client requests to your system. We must secure it with HTTPS as well. Although the Eureka Discovery Server typically doesn't serve sensitive data (it's primarily for service registration and discovery), it should still use HTTPS. The connection between the services and Eureka should be secure. Services should register and fetch metadata over HTTPS to ensure that no sensitive information (e.g., credentials) is sent over unencrypted channels. If all your microservices and the API Gateway use HTTPS, the Eureka server should also be configured to maintain a uniform security posture.
 
+# UUID
+I will use the uuid as the primary identifier in my APIs (e.g., for fetching, updating, or deleting a user). And avoid exposing the MongoDB _id in the API responses, as it is specific to the database and less portable.
+
+Globally Unique Identification: A UUID ensures that each user has a unique identifier that can be universally unique across systems or databases, even if they are distributed.
+Decoupling from Natural Keys: Using UUIDs avoids relying on mutable or sensitive fields like usernames, emails, or phone numbers as unique keys. These fields can change over time, whereas a UUID remains constant.
+Ease of Integration: UUIDs make it easier to integrate with external systems, APIs, or services that require unique identifiers.
+Non-Sequential IDs: Unlike database-generated IDs (e.g., auto-increment integers), UUIDs are harder to predict, adding a layer of security for APIs where IDs are exposed.
+
+
+UUID.randomUUID() generates a UUID using a random number generator. For UUID version 4, the collision probability is extremely low due to the large size of the UUID (128 bits). It has around 2^122 possible combinations, which makes the chance of a collision negligible. However, to ensure that UUID collisions are impossible, we will create a unique index in your MongoDB collection: db.users.createIndex({ uuid: 1 }, { unique: true });
+
 
 # Frontend Considerations
 React will be used to build the user interface (UI). The frontend interacts with the backend via the API Gateway using RESTful APIs. I am using React Router for client-side navigation and Axios/Fetch for making HTTP requests to the backend.
