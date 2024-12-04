@@ -5,10 +5,11 @@
 *.classpath
 
 *.mvn
-*.Help.md
+*.HELP.md
 *.mvnw
 *.mvnw.cmd
 
+**/HELP.md/
 **/.metadata/
 **/.settings/
 **/target/
