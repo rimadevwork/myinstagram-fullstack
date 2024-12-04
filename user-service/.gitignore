@@ -1,0 +1,14 @@
+*.DS_Store
+*.project
+*.classpath
+
+*.mvn
+*.Help.md
+*.mvnw
+*.mvnw.cmd
+
+**/.metadata/
+**/.settings/
+**/target/
+
+/node_modules
