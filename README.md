@@ -91,6 +91,15 @@ I have chosen MongoDB for its flexibilty and scalibilty to handling unstructured
 2. Add indexes on frequently queried fields (e.g., userId in posts, postId in comments).
 3. Ensure MongoDB replication is set up with multiple nodes - For high availability.
 
+MongoDB is schema-less, which means you can start saving data to it without defining the schema up front. However, it is common practice to define a model class (entity) in your application to map to a MongoDB collection (in this case, the "user" collection). The schema definition happens in the application code, not in the MongoDB database itself.
+
+# Secure Protocol
+I will hash the passwords using a strong hashing algorithm like BCrypt. BCrypt automatically handles the salting and the complexity of the hashing process, ensuring that each password is securely hashed before storing it in the database.
+However, when the React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords.
+Thats why I will configure the Spring Boot apps to use HTTPS for secure communication by configuring SSL in your application.properties. I will generate a self-signed certificate for development purposes, in production, we should use a certificate signed by a trusted certificate authority (CA). I should also ensure that all HTTP traffic is redirected to HTTPS.
+I should also ensure HTTPS on the React side: When making API calls from React app, I will use https:// in the URL. 
+
+
 # Frontend Considerations
 React will be used to build the user interface (UI). The frontend interacts with the backend via the API Gateway using RESTful APIs. I am using React Router for client-side navigation and Axios/Fetch for making HTTP requests to the backend.
 
