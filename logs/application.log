@@ -1,0 +1,320 @@
+2024-12-04 00:59:53 - Running the evict task with compensationTime 3ms
+2024-12-04 02:01:06 - Running the evict task with compensationTime 10ms
+2024-12-04 03:02:19 - Running the evict task with compensationTime 9ms
+2024-12-04 05:04:03 - Running the evict task with compensationTime 10ms
+2024-12-04 07:00:23 - Running the evict task with compensationTime 9ms
+2024-12-04 07:19:27 - Running the evict task with compensationTime 10ms
+2024-12-04 07:20:39 - Running the evict task with compensationTime 9ms
+2024-12-04 07:37:23 - Running the evict task with compensationTime 9ms
+2024-12-04 07:38:23 - Running the evict task with compensationTime 9ms
+2024-12-04 07:39:23 - Current renewal threshold is : 0
+2024-12-04 07:39:23 - Running the evict task with compensationTime 9ms
+2024-12-04 07:40:23 - Running the evict task with compensationTime 3ms
+2024-12-04 07:41:23 - Running the evict task with compensationTime 8ms
+2024-12-04 07:42:23 - Running the evict task with compensationTime 10ms
+2024-12-04 07:43:23 - Running the evict task with compensationTime 10ms
+2024-12-04 07:44:23 - Running the evict task with compensationTime 5ms
+2024-12-04 07:45:23 - Running the evict task with compensationTime 10ms
+2024-12-04 07:46:23 - Running the evict task with compensationTime 6ms
+2024-12-04 07:47:23 - Running the evict task with compensationTime 9ms
+2024-12-04 07:48:23 - Running the evict task with compensationTime 10ms
+2024-12-04 07:49:23 - Running the evict task with compensationTime 3ms
+2024-12-04 07:50:23 - Running the evict task with compensationTime 8ms
+2024-12-04 07:51:23 - Running the evict task with compensationTime 10ms
+2024-12-04 07:52:23 - Running the evict task with compensationTime 6ms
+2024-12-04 07:53:23 - Running the evict task with compensationTime 2ms
+2024-12-04 07:54:23 - Current renewal threshold is : 0
+2024-12-04 07:54:23 - Running the evict task with compensationTime 9ms
+2024-12-04 07:55:23 - Running the evict task with compensationTime 9ms
+2024-12-04 08:12:58 - Running the evict task with compensationTime 10ms
+2024-12-04 08:13:58 - Running the evict task with compensationTime 9ms
+2024-12-04 08:14:58 - Running the evict task with compensationTime 9ms
+2024-12-04 08:31:38 - Running the evict task with compensationTime 10ms
+2024-12-04 08:51:03 - Running the evict task with compensationTime 9ms
+2024-12-04 09:00:55 - Running the evict task with compensationTime 6ms
+2024-12-04 09:01:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:02:55 - Running the evict task with compensationTime 5ms
+2024-12-04 09:03:55 - Running the evict task with compensationTime 5ms
+2024-12-04 09:04:55 - Running the evict task with compensationTime 5ms
+2024-12-04 09:05:55 - Running the evict task with compensationTime 1ms
+2024-12-04 09:06:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:07:55 - Running the evict task with compensationTime 0ms
+2024-12-04 09:08:55 - Current renewal threshold is : 0
+2024-12-04 09:08:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:09:55 - Running the evict task with compensationTime 3ms
+2024-12-04 09:10:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:11:55 - Running the evict task with compensationTime 1ms
+2024-12-04 09:12:55 - Running the evict task with compensationTime 2ms
+2024-12-04 09:13:55 - Running the evict task with compensationTime 2ms
+2024-12-04 09:14:55 - Running the evict task with compensationTime 5ms
+2024-12-04 09:15:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:16:55 - Running the evict task with compensationTime 5ms
+2024-12-04 09:17:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:18:55 - Running the evict task with compensationTime 2ms
+2024-12-04 09:19:55 - Running the evict task with compensationTime 2ms
+2024-12-04 09:20:55 - Running the evict task with compensationTime 5ms
+2024-12-04 09:21:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:22:55 - Running the evict task with compensationTime 3ms
+2024-12-04 09:23:55 - Current renewal threshold is : 0
+2024-12-04 09:23:55 - Running the evict task with compensationTime 4ms
+2024-12-04 09:24:55 - Running the evict task with compensationTime 3ms
+2024-12-04 09:25:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:26:56 - Running the evict task with compensationTime 5ms
+2024-12-04 09:27:56 - Running the evict task with compensationTime 5ms
+2024-12-04 09:28:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:29:56 - Running the evict task with compensationTime 1ms
+2024-12-04 09:30:56 - Running the evict task with compensationTime 5ms
+2024-12-04 09:31:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:32:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:33:56 - Running the evict task with compensationTime 0ms
+2024-12-04 09:34:56 - Running the evict task with compensationTime 1ms
+2024-12-04 09:35:56 - Running the evict task with compensationTime 5ms
+2024-12-04 09:36:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:37:56 - Running the evict task with compensationTime 5ms
+2024-12-04 09:38:55 - Current renewal threshold is : 0
+2024-12-04 09:38:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:39:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:40:56 - Running the evict task with compensationTime 1ms
+2024-12-04 09:41:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:42:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:43:56 - Running the evict task with compensationTime 3ms
+2024-12-04 09:44:56 - Running the evict task with compensationTime 3ms
+2024-12-04 09:45:56 - Running the evict task with compensationTime 1ms
+2024-12-04 09:46:56 - Running the evict task with compensationTime 1ms
+2024-12-04 09:47:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:48:56 - Running the evict task with compensationTime 1ms
+2024-12-04 09:49:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:50:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:51:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:52:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:53:55 - Current renewal threshold is : 0
+2024-12-04 09:53:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:54:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:55:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:56:56 - Running the evict task with compensationTime 4ms
+2024-12-04 09:57:56 - Running the evict task with compensationTime 5ms
+2024-12-04 09:58:56 - Running the evict task with compensationTime 2ms
+2024-12-04 09:59:56 - Running the evict task with compensationTime 3ms
+2024-12-04 10:00:56 - Running the evict task with compensationTime 4ms
+2024-12-04 10:01:56 - Running the evict task with compensationTime 0ms
+2024-12-04 10:02:56 - Running the evict task with compensationTime 20ms
+2024-12-04 10:03:56 - Running the evict task with compensationTime 2ms
+2024-12-04 10:04:56 - Running the evict task with compensationTime 2ms
+2024-12-04 10:05:56 - Running the evict task with compensationTime 4ms
+2024-12-04 10:06:56 - Running the evict task with compensationTime 0ms
+2024-12-04 10:07:56 - Running the evict task with compensationTime 1ms
+2024-12-04 10:08:55 - Current renewal threshold is : 0
+2024-12-04 10:08:56 - Running the evict task with compensationTime 4ms
+2024-12-04 10:09:56 - Running the evict task with compensationTime 3ms
+2024-12-04 10:10:56 - Running the evict task with compensationTime 4ms
+2024-12-04 10:11:56 - Running the evict task with compensationTime 5ms
+2024-12-04 10:12:56 - Running the evict task with compensationTime 5ms
+2024-12-04 10:13:56 - Running the evict task with compensationTime 0ms
+2024-12-04 10:14:56 - Running the evict task with compensationTime 3ms
+2024-12-04 10:15:56 - Running the evict task with compensationTime 5ms
+2024-12-04 10:16:56 - Running the evict task with compensationTime 5ms
+2024-12-04 10:18:24 - Running the evict task with compensationTime 4ms
+2024-12-04 10:24:22 - Running the evict task with compensationTime 9ms
+2024-12-04 10:30:20 - Running the evict task with compensationTime 10ms
+2024-12-04 10:36:18 - Running the evict task with compensationTime 9ms
+2024-12-04 10:42:16 - Running the evict task with compensationTime 9ms
+2024-12-04 10:43:16 - Running the evict task with compensationTime 10ms
+2024-12-04 10:49:14 - Current renewal threshold is : 0
+2024-12-04 10:49:15 - Running the evict task with compensationTime 10ms
+2024-12-04 10:50:15 - Running the evict task with compensationTime 10ms
+2024-12-04 10:51:15 - Running the evict task with compensationTime 9ms
+2024-12-04 10:57:13 - Running the evict task with compensationTime 9ms
+2024-12-04 10:58:13 - Running the evict task with compensationTime 8ms
+2024-12-04 11:04:11 - Running the evict task with compensationTime 9ms
+2024-12-04 11:15:08 - Running the evict task with compensationTime 9ms
+2024-12-04 11:16:08 - Running the evict task with compensationTime 10ms
+2024-12-04 11:17:08 - Running the evict task with compensationTime 7ms
+2024-12-04 11:23:06 - Running the evict task with compensationTime 9ms
+2024-12-04 11:24:06 - Running the evict task with compensationTime 6ms
+2024-12-04 11:30:05 - Running the evict task with compensationTime 10ms
+2024-12-04 11:31:05 - Running the evict task with compensationTime 7ms
+2024-12-04 11:35:21 - Running the evict task with compensationTime 10ms
+2024-12-04 13:20:09 - Running the evict task with compensationTime 10ms
+2024-12-04 13:50:48 - Current renewal threshold is : 0
+2024-12-04 13:50:49 - Running the evict task with compensationTime 9ms
+2024-12-04 13:51:49 - Running the evict task with compensationTime 4ms
+2024-12-04 13:52:49 - Running the evict task with compensationTime 2ms
+2024-12-04 13:53:49 - Running the evict task with compensationTime 1ms
+2024-12-04 13:54:49 - Running the evict task with compensationTime 2ms
+2024-12-04 13:55:49 - Running the evict task with compensationTime 2ms
+2024-12-04 13:56:49 - Running the evict task with compensationTime 4ms
+2024-12-04 13:57:49 - Running the evict task with compensationTime 0ms
+2024-12-04 13:58:49 - Running the evict task with compensationTime 1ms
+2024-12-04 13:59:49 - Running the evict task with compensationTime 5ms
+2024-12-04 14:00:49 - Running the evict task with compensationTime 5ms
+2024-12-04 14:01:49 - Running the evict task with compensationTime 4ms
+2024-12-04 14:02:49 - Running the evict task with compensationTime 3ms
+2024-12-04 14:03:49 - Running the evict task with compensationTime 0ms
+2024-12-04 14:04:49 - Running the evict task with compensationTime 4ms
+2024-12-04 14:05:48 - Current renewal threshold is : 0
+2024-12-04 14:05:49 - Running the evict task with compensationTime 3ms
+2024-12-04 14:06:49 - Running the evict task with compensationTime 3ms
+2024-12-04 14:07:23 - Restarting due to 6 class path changes (0 additions, 6 deletions, 0 modifications)
+2024-12-04 14:07:23 - Unregistering application EUREKA-DISCOVERY with eureka with status DOWN
+2024-12-04 14:07:23 - Stopping ProtocolHandler ["http-nio-8761"]
+2024-12-04 14:07:23 - Shutting down Eureka Server..
+2024-12-04 14:07:23 - Shutting down ...
+2024-12-04 14:07:23 - Attempting to get the value for an expired monitor: eurekaServer.replication.batchSize.Will start computing stats again.
+2024-12-04 14:07:23 - Attempting to get the value for an expired monitor: eurekaServer.replication.executionTime.Will start computing stats again.
+2024-12-04 14:07:23 - Attempting to get the value for an expired monitor: eurekaServer.replication.executionTime.Will start computing stats again.
+2024-12-04 14:07:23 - Attempting to get the value for an expired monitor: eurekaServer.replication.batchSize.Will start computing stats again.
+2024-12-04 14:07:23 - Shut down
+2024-12-04 14:07:23 - Eureka Service is now shutdown...
+2024-12-04 14:07:23 - Shutting down ...
+2024-12-04 14:07:23 - Shut down
+2024-12-04 14:07:23 - Shutting down DiscoveryClient ...
+2024-12-04 14:07:23 - Completed shut down of DiscoveryClient
+2024-12-04 14:07:51 - Starting EurekaDiscoveryApplicationTests using Java 17.0.10 with PID 9971 (started by poornima in /Users/poornima/Documents/eclipse-ws/myinstagram-fullstack/eureka-discovery)
+2024-12-04 14:07:51 - No active profile set, falling back to 1 default profile: "default"
+2024-12-04 14:07:51 - BeanFactory id=b58fb350-6222-3e4a-881e-0299d05953a9
+2024-12-04 14:07:51 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-12-04 14:07:51 - Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$916/0x0000007001435fb0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:51 - Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:07:52 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-04 14:07:52 - Setting initial instance status as: STARTING
+2024-12-04 14:07:52 - Initializing Eureka in region us-east-1
+2024-12-04 14:07:52 - Client configured to neither register nor query for data.
+2024-12-04 14:07:52 - Discovery Client initialized at timestamp 1733281672282 with initial instances count: 0
+2024-12-04 14:07:52 - Initializing ...
+2024-12-04 14:07:52 - Adding new peer nodes [http://localhost:8761/eureka/]
+2024-12-04 14:07:52 - Using JSON encoding codec LegacyJacksonJson
+2024-12-04 14:07:52 - Using JSON decoding codec LegacyJacksonJson
+2024-12-04 14:07:52 - Using XML encoding codec XStreamXml
+2024-12-04 14:07:52 - Using XML decoding codec XStreamXml
+2024-12-04 14:07:52 - Replica node URL:  http://localhost:8761/eureka/
+2024-12-04 14:07:52 - Finished initializing remote region registries. All known remote regions: []
+2024-12-04 14:07:52 - Initialized
+2024-12-04 14:07:52 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-04 14:07:52 - Registering application EUREKA-DISCOVERY with eureka with status UP
+2024-12-04 14:07:52 - isAws returned false
+2024-12-04 14:07:52 - Initialized server context
+2024-12-04 14:07:52 - Got 1 instances from neighboring DS node
+2024-12-04 14:07:52 - Renew threshold is: 1
+2024-12-04 14:07:52 - Changing status to UP
+2024-12-04 14:07:52 - Started Eureka Server
+2024-12-04 14:07:52 - Started EurekaDiscoveryApplicationTests in 1.802 seconds (process running for 2.328)
+2024-12-04 14:07:53 - Unregistering application EUREKA-DISCOVERY with eureka with status DOWN
+2024-12-04 14:07:53 - Shutting down Eureka Server..
+2024-12-04 14:07:53 - Shutting down ...
+2024-12-04 14:07:53 - Cannot clean connections
+java.lang.IllegalStateException: Client instance has been closed.
+	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169)
+	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248)
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363)
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54)
+	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:347)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-12-04 14:07:53 - Shut down
+2024-12-04 14:07:53 - Eureka Service is now shutdown...
+2024-12-04 14:07:53 - Shutting down ...
+2024-12-04 14:07:53 - Shut down
+2024-12-04 14:07:53 - Shutting down DiscoveryClient ...
+2024-12-04 14:07:53 - Completed shut down of DiscoveryClient
+2024-12-04 14:08:13 - Starting EurekaDiscoveryApplication using Java 17.0.10 with PID 9979 (/Users/poornima/Documents/eclipse-ws/myinstagram-fullstack/eureka-discovery/target/classes started by poornima in /Users/poornima/Documents/eclipse-ws/myinstagram-fullstack/eureka-discovery)
+2024-12-04 14:08:13 - No active profile set, falling back to 1 default profile: "default"
+2024-12-04 14:08:13 - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-12-04 14:08:13 - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-12-04 14:08:13 - BeanFactory id=f20ecff3-08bd-338c-9f02-135bc4ab058f
+2024-12-04 14:08:13 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2024-12-04 14:08:13 - Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$559/0x000000d00135ea28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'default.org.springframework.cloud.netflix.eureka.loadbalancer.LoadBalancerEurekaAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:13 - Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2024-12-04 14:08:14 - Tomcat initialized with port 8761 (http)
+2024-12-04 14:08:14 - Initializing ProtocolHandler ["http-nio-8761"]
+2024-12-04 14:08:14 - Starting service [Tomcat]
+2024-12-04 14:08:14 - Starting Servlet engine: [Apache Tomcat/10.1.18]
+2024-12-04 14:08:14 - Initializing Spring embedded WebApplicationContext
+2024-12-04 14:08:14 - Root WebApplicationContext: initialization completed in 807 ms
+2024-12-04 14:08:14 - Using JSON encoding codec LegacyJacksonJson
+2024-12-04 14:08:14 - Using JSON decoding codec LegacyJacksonJson
+2024-12-04 14:08:14 - Using XML encoding codec XStreamXml
+2024-12-04 14:08:14 - Using XML decoding codec XStreamXml
+2024-12-04 14:08:14 - LiveReload server is running on port 35729
+2024-12-04 14:08:14 - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-04 14:08:14 - Setting initial instance status as: STARTING
+2024-12-04 14:08:15 - Initializing Eureka in region us-east-1
+2024-12-04 14:08:15 - Client configured to neither register nor query for data.
+2024-12-04 14:08:15 - Discovery Client initialized at timestamp 1733281695011 with initial instances count: 0
+2024-12-04 14:08:15 - Initializing ...
+2024-12-04 14:08:15 - Adding new peer nodes [http://localhost:8761/eureka/]
+2024-12-04 14:08:15 - Using JSON encoding codec LegacyJacksonJson
+2024-12-04 14:08:15 - Using JSON decoding codec LegacyJacksonJson
+2024-12-04 14:08:15 - Using XML encoding codec XStreamXml
+2024-12-04 14:08:15 - Using XML decoding codec XStreamXml
+2024-12-04 14:08:15 - Replica node URL:  http://localhost:8761/eureka/
+2024-12-04 14:08:15 - Finished initializing remote region registries. All known remote regions: []
+2024-12-04 14:08:15 - Initialized
+2024-12-04 14:08:15 - Exposing 1 endpoint(s) beneath base path '/actuator'
+2024-12-04 14:08:15 - Registering application EUREKA-DISCOVERY with eureka with status UP
+2024-12-04 14:08:15 - Starting ProtocolHandler ["http-nio-8761"]
+2024-12-04 14:08:15 - isAws returned false
+2024-12-04 14:08:15 - Initialized server context
+2024-12-04 14:08:15 - Got 1 instances from neighboring DS node
+2024-12-04 14:08:15 - Renew threshold is: 1
+2024-12-04 14:08:15 - Changing status to UP
+2024-12-04 14:08:15 - Started Eureka Server
+2024-12-04 14:08:15 - Tomcat started on port 8761 (http) with context path ''
+2024-12-04 14:08:15 - Updating port to 8761
+2024-12-04 14:08:15 - Started EurekaDiscoveryApplication in 2.234 seconds (process running for 2.486)
+2024-12-04 14:09:15 - Running the evict task with compensationTime 0ms
+2024-12-04 14:09:31 - Unregistering application EUREKA-DISCOVERY with eureka with status DOWN
+2024-12-04 14:09:31 - Shutting down Eureka Server..
+2024-12-04 14:09:31 - Shutting down ...
+2024-12-04 14:09:31 - Cannot clean connections
+java.lang.IllegalStateException: Client instance has been closed.
+	at org.glassfish.jersey.internal.guava.Preconditions.checkState(Preconditions.java:169)
+	at org.glassfish.jersey.client.JerseyClient.checkNotClosed(JerseyClient.java:248)
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:363)
+	at org.glassfish.jersey.client.JerseyClient.getConfiguration(JerseyClient.java:54)
+	at com.netflix.discovery.shared.transport.jersey3.EurekaJersey3ClientImpl$ConnectionCleanerTask.run(EurekaJersey3ClientImpl.java:347)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+2024-12-04 14:09:31 - Shut down
+2024-12-04 14:09:31 - Eureka Service is now shutdown...
+2024-12-04 14:09:31 - Shutting down ...
+2024-12-04 14:09:31 - Shut down
+2024-12-04 14:09:31 - Shutting down DiscoveryClient ...
+2024-12-04 14:09:31 - Completed shut down of DiscoveryClient
