@@ -96,6 +96,7 @@ MongoDB is schema-less, which means you can start saving data to it without defi
 # Secure Protocol
 I will hash the passwords using a strong hashing algorithm like BCrypt. BCrypt automatically handles the salting and the complexity of the hashing process, ensuring that each password is securely hashed before storing it in the database.
 Password Hashing & Salt: Passwords are not stored in plain text but are hashed (typically with bcrypt or PBKDF2) along with a unique salt for each user. This ensures that even if the database is compromised, the passwords remain secure.
+Note: When using a password hashing strategy like BCrypt, it already incorporates salting automatically, so you do not need to explicitly add a salt yourself. The salt is embedded within the hashed password, and it is used by the BCrypt algorithm to make password hashes unique even if the same password is used by different users.
 
 However, when the React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. 
 So I need to ensure following:
