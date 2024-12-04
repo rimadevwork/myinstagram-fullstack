@@ -25,6 +25,8 @@ A social media photo sharing app like Instagram, emulating its core features and
 * Logging - SLf4J + LogBack, Splunk
 
 # Microservices
+* API Gatewar Service
+* Eureka Discovery Service
 * User Service
 * Post Service
 * Media Service
