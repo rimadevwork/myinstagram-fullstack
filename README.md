@@ -14,15 +14,15 @@ A social media photo sharing app like Instagram, emulating its core features and
 
 # Technology Stack
 * Backend - Java 8, Spring Boot
-* API Gateway - Spring
-* Discovery - Spring Eureka
-* Events - Kafka
+* API Gateway - Spring Cloud Gateway
+* Discovery - Spring Eureka Discovery Service
+* Event Orchestration/SAGA - Kafka
 * Authentication - OAuth2
 * Frontend - React, Bootstrap
 * Database - MongoDB
 * Caching - Redis
 * Montioring - Splunk, Prometheus, Grafana, Sentry
-* Hosting - AWS
+* Logging - SLf4J + LogBack, Splunk
 
 # Microservices
 * User Service
@@ -94,3 +94,8 @@ React will be used to build the user interface (UI). The frontend interacts with
 
 # User Management considerations
 I will implement roles such as Admin, User, Moderator with appropriate access control policies. The API Gateway will extract the role and permission claims from the JWT token and ensure proper access control for each route. Spring Security’s method-level security annotations (@PreAuthorize) are helpful for this.
+
+# Role of Redis for Caching:
+Store Session Data in Redis. Store filter settings as a hash:
+Key: user:preferences:{userId}
+Value: { "theme": "dark", "sort": "newest", "language": "en" }
