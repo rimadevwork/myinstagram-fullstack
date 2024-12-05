@@ -95,9 +95,9 @@ I have chosen MongoDB for its flexibilty and scalibilty to handling unstructured
 MongoDB is schema-less, which means you can start saving data to it without defining the schema up front. However, it is common practice to define a model class (entity) in your application to map to a MongoDB collection (in this case, the "user" collection). The schema definition happens in the application code, not in the MongoDB database itself.
 
 ```
-
-use userdb
-
+mongosh
+use myinsta-userdb
+db.users.find()
 ```
 
 # Authentication
