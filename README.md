@@ -195,4 +195,7 @@ Response:
 Success (201): User created successfully.
 Failure (400): Validation error or duplicate username.
 
+# Validations
+In Spring Boot, you typically put validation checks for user details in the model class (e.g., UserRegistrationRequest) using Bean Validation annotations (like @NotNull, @Size, @Email, etc.), and then you can trigger the validation in the controller or service layer.
+
 
