@@ -1,4 +1,4 @@
-package com.myinsta.user.user_service;
+package com.myinsta.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
