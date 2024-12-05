@@ -1,6 +1,7 @@
 package com.myinsta.user.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +12,7 @@ import com.myinsta.user.entity.User;
 import com.myinsta.user.exception.UserAlreadyExistsException;
 import com.myinsta.user.exception.UserNotFoundException;
 import com.myinsta.user.repository.UserRepository;
+import com.myinsta.user.request.LoginRequest;
 import com.myinsta.user.request.UserProfileUpdateRequest;
 import com.myinsta.user.request.UserRegistrationRequest;
 
@@ -52,5 +54,13 @@ public class UserService {
 	
 	public void updateUser(UserProfileUpdateRequest request) {
 		//TODO
+	}
+	
+	public User validateUser(LoginRequest request) {
+        Optional<User> user = userRepository.findByUsername(request.getUserName());
+        if (user.isPresent() && passwordEncoder.matches(request.getPassword(), user.get().getPassword())) {
+        	return user.get();
+        }
+        return null;
 	}
 }
