@@ -1,4 +1,4 @@
-package com.myinsta.eureka_discovery;
+package com.myinsta.discovery;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

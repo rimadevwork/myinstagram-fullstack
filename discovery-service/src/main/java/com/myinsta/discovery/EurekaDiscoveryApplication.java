@@ -1,4 +1,4 @@
-package com.myinsta.eureka_discovery;
+package com.myinsta.discovery;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
