@@ -105,6 +105,18 @@ Passwords are hashed (e.g., using BCrypt) and stored securely. BCrypt automatica
 
 Tokens are issued as JWTs by the Authorization Server.
 
+Note:
+Client: The React front-end (which could be running in the browser) will act as a "client" in the OAuth2 flow. It will send requests to your Authorization Server for tokens, passing its client_id and client_secret along with user credentials (username/password).
+Client Validation: In your case, the client_id and client_secret will be the same for all requests since you're only using one client (the React app). The client_secret can be hardcoded in your back-end (Authorization Server), and you just validate the same credentials for every login request.
+Since there's only one client, we can hardcode the client credentials in your ClientService. 
+
+How It Works:
+Authorization Server: This is the server responsible for authenticating the user (e.g., via username/password) and issuing an access token. This server can also issue a refresh token for obtaining new access tokens once they expire.
+
+Resource Server: Once the authorization server issues the access token, the resource server is responsible for validating the access token and allowing or denying access to the protected resources (e.g., user data, posts, etc.) based on the token.
+
+Client: This is the application that requests access to the protected resources. The client sends the access token to the resource server in the Authorization header of the HTTP request.
+
 # Secure Protocol
 When React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. 
 So I need to ensure following:
