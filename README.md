@@ -203,3 +203,48 @@ MongoDB enforces a document size limit of 16 MB (16,777,216 bytes). This is the 
 It's good practice to impose your own character limits for fields like username and firstName based on your application's needs.
 
 Normalize Username to Lowercase Before Storing and Comparing
+
+# Login
+1. Authorization Server Receives the Login Request:  The Authorization Server receives the username and password from the client (via the /oauth2/token endpoint).
+```
+POST /oauth2/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type=password
+client_id=instagram-client
+client_secret=secret
+username=johndoe
+password=securePassword123
+scope=read write
+
+```
+
+2. Authorization Server Calls the User Service : The Authorization Server sends an HTTP request to the User Service to validate the credentials.
+```
+POST /validate
+Content-Type: application/json
+
+{
+    "username": "johndoe",
+    "password": "securePassword123"
+}
+```
+
+3. User Service Validates the Credentials : The User Service queries the users collection in the database to validate the username and password. If valid, the User Service returns the user's details (or just a confirmation response). If invalid, it returns an error.
+```
+{
+    "status": "success",
+    "userId": "12345",
+    "roles": ["USER"]
+}
+
+{
+    "status": "failure",
+    "message": "Invalid username or password"
+}
+
+```
+
+4. Authorization Server Generates Tokens : If the credentials are valid, the Authorization Server generates the access token and optional refresh token. If invalid, the Authorization Server returns an error response to the client.
+
+
