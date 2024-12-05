@@ -27,6 +27,7 @@ A social media photo sharing app like Instagram, emulating its core features and
 # Microservices
 * API Gatewar Service
 * Eureka Discovery Service
+* Authorisation Server - responsible for handling user authentication, issuing tokens (access tokens and refresh tokens), and managing scopes/roles.
 * User Service - exposes REST endpoints for registering, editing and authenticating users.
 * Post Service
 * Media Service
@@ -93,12 +94,19 @@ I have chosen MongoDB for its flexibilty and scalibilty to handling unstructured
 
 MongoDB is schema-less, which means you can start saving data to it without defining the schema up front. However, it is common practice to define a model class (entity) in your application to map to a MongoDB collection (in this case, the "user" collection). The schema definition happens in the application code, not in the MongoDB database itself.
 
-# Secure Protocol
-I will hash the passwords using a strong hashing algorithm like BCrypt. BCrypt automatically handles the salting and the complexity of the hashing process, ensuring that each password is securely hashed before storing it in the database.
-Password Hashing & Salt: Passwords are not stored in plain text but are hashed (typically with bcrypt or PBKDF2) along with a unique salt for each user. This ensures that even if the database is compromised, the passwords remain secure.
-Note: When using a password hashing strategy like BCrypt, it already incorporates salting automatically, so you do not need to explicitly add a salt yourself. The salt is embedded within the hashed password, and it is used by the BCrypt algorithm to make password hashes unique even if the same password is used by different users.
+```
 
-However, when the React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. 
+use userdb
+
+```
+
+# Authentication
+Passwords are hashed (e.g., using BCrypt) and stored securely. BCrypt automatically handles the salting and the complexity of the hashing process. The salt is embedded within the hashed password, and it is used by the BCrypt algorithm to make password hashes unique even if the same password is used by different users.
+
+Tokens are issued as JWTs by the Authorization Server.
+
+# Secure Protocol
+When React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. 
 So I need to ensure following:
 1. Enabling SSL in the application.properties or application.yml of each microservice.
 2. Redirecting HTTP traffic to HTTPS, if you want to ensure that users can only access your services via secure channels.
@@ -107,6 +115,7 @@ So I need to ensure following:
 5. In your React client, ensure all URLs are https://.
 
 Note: The API Gateway is the entry point for all client requests to your system. We must secure it with HTTPS as well. Although the Eureka Discovery Server typically doesn't serve sensitive data (it's primarily for service registration and discovery), it should still use HTTPS. The connection between the services and Eureka should be secure. Services should register and fetch metadata over HTTPS to ensure that no sensitive information (e.g., credentials) is sent over unencrypted channels. If all your microservices and the API Gateway use HTTPS, the Eureka server should also be configured to maintain a uniform security posture.
+
 
 # UUID
 I will use the uuid as the primary identifier in my APIs (e.g., for fetching, updating, or deleting a user). And avoid exposing the MongoDB _id in the API responses, as it is specific to the database and less portable.
@@ -162,3 +171,28 @@ I will implement roles such as Admin, User, Moderator with appropriate access co
 Store Session Data in Redis. Store filter settings as a hash:
 Key: user:preferences:{userId}
 Value: { "theme": "dark", "sort": "newest", "language": "en" }
+
+
+### API Endpoints
+
+## 1. API Endpoint for User Registration
+
+Method: POST
+
+URL: /users/register
+
+Request Body:
+
+```json
+{
+  "username": "john_doe",
+  "password": "password123",
+  "roles": ["ROLE_USER"]
+}
+```
+
+Response:
+Success (201): User created successfully.
+Failure (400): Validation error or duplicate username.
+
+
