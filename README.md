@@ -196,13 +196,14 @@ Success (201): User created successfully.
 Failure (400): Validation error or duplicate username.
 
 # Validations
-In Spring Boot, you typically put validation checks for user details in the model class (e.g., UserRegistrationRequest) using Bean Validation annotations (like @NotNull, @Size, @Email, etc.), and then you can trigger the validation in the controller or service layer.
+In Spring Boot, you typically put validation checks for user details in the model class (e.g., UserRegistrationRequest) using Bean Validation annotations (like @NotNull, @Size, @Email, etc.), and then you can trigger the validation in the controller or service layer. If validation fails, Spring Boot automatically returns a 400 Bad Request response with the validation error messages.
 
 MongoDB enforces a document size limit of 16 MB (16,777,216 bytes). This is the maximum size for a single document, which includes all field data. So, while individual fields like username or firstName are not inherently limited, they contribute to the overall document size. If the total document size exceeds 16 MB, MongoDB will reject the insert/update operation.
 
 It's good practice to impose your own character limits for fields like username and firstName based on your application's needs.
 
-Normalize Username to Lowercase Before Storing and Comparing
+Normalize Username to Lowercase Before Storing and Comparing.
+
 
 # Login
 1. Authorization Server Receives the Login Request:  The Authorization Server receives the username and password from the client (via the /oauth2/token endpoint).
