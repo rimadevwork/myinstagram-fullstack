@@ -24,16 +24,46 @@ A social media photo sharing app like Instagram, emulating its core features and
 * Montioring - Splunk, Prometheus, Grafana, Sentry
 * Logging - SLf4J + LogBack, Splunk
 
-# Microservices
-* API Gatewar Service
-* Eureka Discovery Service
-* Authorisation Server - responsible for handling user authentication, issuing tokens (access tokens and refresh tokens), and managing scopes/roles.
-* User Service - exposes REST endpoints for registering, editing and authenticating users.
-* Post Service
-* Media Service
-* Comment Service
-* Notification Service
-* Search Service
+# Architecture Overview:
+
+## 1. API Gateway (OAuth2 Resource Server)
+Entry point for all client requests. All requests go through the API Gateway
+Gateway validates the user's JWT token
+Gateway routes requests to appropriate services
+Internal services trust requests coming from the gateway
+
+## Auth Server (OAuth2 Authorization Server) - Current Service
+Handles authentication
+Issues JWTs
+Manages client registrations
+Coordinates with User Service for validation
+
+## User Service
+User CRUD operations
+User validation for Auth Server
+Profile management
+
+## Post Service
+Create/edit/delete posts
+Image handling
+Feed generation
+
+## Comment Service
+Manage comments on posts
+Comment notifications
+
+## Notification Service
+Handle push notifications
+Activity updates
+Email notifications
+
+## Media Service
+## Search Service
+
+## Kafka Event Architecture:
+Services communicate asynchronously through Kafka events
+No direct service-to-service HTTP calls
+Event authentication/authorization handled at Kafka level
 
 # Seperation of Concern in Post and Media Service
 Given that media is a central part of Instagram-like apps, I will practise separation of concerns to keep services more modular and easier to scale in the future.
@@ -101,6 +131,26 @@ db.users.find()
 ```
 
 # Authentication
+For our Instagram clone with API Gateway and Kafka:
+
+JWT is sufficient because:
+You only need user authentication
+All requests go through API Gateway
+Services communicate via Kafka
+No third-party integrations mentioned
+
+OAuth2 would be needed if:
+You wanted third-party apps to access your API
+You needed different types of access (mobile, web, service)
+You wanted to implement "Sign in with Instagram" for other apps
+
+### Auth flow:
+User logs in through React UI
+Auth server validates credentials with User Service
+Auth server issues JWT
+React UI includes JWT in all API calls
+API Gateway validates JWT and routes requests
+Services communicate via Kafka events
 Passwords are hashed (e.g., using BCrypt) and stored securely. BCrypt automatically handles the salting and the complexity of the hashing process. The salt is embedded within the hashed password, and it is used by the BCrypt algorithm to make password hashes unique even if the same password is used by different users.
 
 Tokens are issued as JWTs by the Authorization Server.
@@ -117,6 +167,8 @@ Resource Server: Once the authorization server issues the access token, the reso
 
 Client: This is the application that requests access to the protected resources. The client sends the access token to the resource server in the Authorization header of the HTTP request.
 
+allowed.scopes=user.read,user.write,post.read,post.write,comment.read,comment.write,notification.read
+
 # Secure Protocol
 When React client sends the password to the backend, it will be in plain text unless we secure the communication between the client and the server using HTTPS (Hypertext Transfer Protocol Secure). HTTPS ensures that the data transmitted between the client (React) and the server (Spring Boot) is encrypted, preventing attackers from intercepting sensitive information like passwords. 
 So I need to ensure following:
@@ -127,6 +179,8 @@ So I need to ensure following:
 5. In your React client, ensure all URLs are https://.
 
 Note: The API Gateway is the entry point for all client requests to your system. We must secure it with HTTPS as well. Although the Eureka Discovery Server typically doesn't serve sensitive data (it's primarily for service registration and discovery), it should still use HTTPS. The connection between the services and Eureka should be secure. Services should register and fetch metadata over HTTPS to ensure that no sensitive information (e.g., credentials) is sent over unencrypted channels. If all your microservices and the API Gateway use HTTPS, the Eureka server should also be configured to maintain a uniform security posture.
+
+Note: This will generate a random 256-bit key encoded in Base64, which you can use as your JWT secret.: openssl rand -base64 32
 
 
 # UUID
