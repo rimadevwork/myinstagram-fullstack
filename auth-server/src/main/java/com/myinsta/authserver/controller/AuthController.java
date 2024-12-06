@@ -17,18 +17,15 @@ import com.myinsta.authserver.service.TokenService;
 import jakarta.validation.Valid;
 
 /**
- * @author rima.devwork@gmail.com 
+ * @author rima.devwork@gmail.com
  */
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
-	
-	// HTTP client to call User Service
-	private final RestTemplate restTemplate; 
 
+	private final RestTemplate restTemplate; // HTTP client to call User Service
 	private final ClientService clientService;
-
 	private final TokenService tokenService;
 
 	public AuthController(RestTemplate restTemplate, ClientService clientService, TokenService tokenService) {

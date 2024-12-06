@@ -1,5 +1,6 @@
 package com.myinsta.authserver.service;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 /**
@@ -9,10 +10,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClientService {
 
-	// Since there's only one client, we can hardcode the client credentials
+	// Since there's only one client, we can hard-code the client credentials in application.properties
+	@Value("${registered-client-id}")
+    private String REGISTERED_CLIENT_ID;  
+	
+	@Value("${registered.client-secret}")
+    private String REGISTERED_CLIENT_SECRET; 
 
-	private static final String REGISTERED_CLIENT_ID = "instagram-client"; // Example client ID
-	private static final String REGISTERED_CLIENT_SECRET = "secret"; // Example client secret
 
 	public boolean validateClient(String clientId, String clientSecret) {
 		return REGISTERED_CLIENT_ID.equals(clientId) && REGISTERED_CLIENT_SECRET.equals(clientSecret);

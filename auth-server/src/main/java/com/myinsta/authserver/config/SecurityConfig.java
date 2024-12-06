@@ -14,7 +14,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
 	/*
-	 *  Configure the HTTP Security (CORS, CSRF, session management, etc.)
+	 * Configure the HTTP Security (CORS, CSRF, session management, etc.)
 	 */
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {

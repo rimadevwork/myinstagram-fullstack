@@ -11,9 +11,12 @@ import org.springframework.web.client.RestTemplate;
 @Configuration
 public class AuthorizationServerConfig {
 
+	/**
+	 * 
+	 * @LoadBalanced to enable it to perform client-side load balancing using Eureka.
+	 */
 	@Bean
     @LoadBalanced 
-    //to enable it to perform client-side load balancing using Eureka.
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }

@@ -58,6 +58,7 @@ public class UserController {
 	public ResponseEntity<?> validateUser(@RequestBody LoginRequest request) {
 		logger.debug("Validating Login request for username: " + request.getUserName() + " and pwd: "
 				+ request.getPassword());
+		
 		User user = userService.validateUser(request);
 		if (user != null) {
 			return ResponseEntity.ok(Map.of("status", "success", "userId", user.getUuid(), "roles", user.getRoles()));

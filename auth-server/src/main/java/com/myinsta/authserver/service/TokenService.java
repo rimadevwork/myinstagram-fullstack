@@ -31,7 +31,9 @@ public class TokenService {
     @Value("${jwt.refresh-token-expiration-ms}")
     private long refreshTokenExpirationTime;  // Refresh token expiration time in milliseconds
 
-    // Method to generate access token
+    /*
+     *  Method to generate access token
+     */
     public String generateAccessToken(Map<String, Object> userDetails) {
         return Jwts.builder()
                 .setClaims(userDetails)  // Add user details to the claims
@@ -42,7 +44,9 @@ public class TokenService {
                 .compact();  // Build and return the JWT token
     }
 
-    // Method to generate refresh token
+    /*
+     *  Method to generate refresh token
+     */
     public String generateRefreshToken(Map<String, Object> userDetails) {
         return Jwts.builder()
                 .setClaims(userDetails)  // Add user details to the claims
@@ -53,7 +57,9 @@ public class TokenService {
                 .compact();  // Build and return the refresh token
     }
 
-    // Method to validate access token (optional, for token validation during protected resource access)
+    /*
+     *  Method to validate access token (optional, for token validation during protected resource access)
+     */
     public boolean validateAccessToken(String token) {
         try {
             Jwts.parser().setSigningKey(secretKey).parseClaimsJws(token);  // Parse the JWT using the secret key
@@ -63,7 +69,9 @@ public class TokenService {
         }
     }
 
-    // Method to get the username from the token (optional)
+    /*
+     *  Method to get the username from the token (optional)
+     */
     public String getUsernameFromToken(String token) {
         return Jwts.parser()
                 .setSigningKey(secretKey)
