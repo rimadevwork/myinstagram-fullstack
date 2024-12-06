@@ -32,6 +32,11 @@ public class UserService {
 		this.userRepository = userRepository;
 		this.passwordEncoder = passwordEncoder;
 	}
+	
+	public User getUserById(String userId) {
+        return userRepository.findByUuid(userId)
+            .orElseThrow(() -> new UserNotFoundException("User not found with id: " + userId));
+    }
 
 	public User saveUser(User user) {
 		user.setPassword(passwordEncoder.encode(user.getPassword())); // Encrypt the password
@@ -39,13 +44,13 @@ public class UserService {
 	}
 
 	public void registerUser(UserRegistrationRequest request) {
-		if (userRepository.findByUsername(request.getUserName()).isPresent()) {
+		if (userRepository.findByUserName(request.getUserName()).isPresent()) {
 			logger.debug("Username is already taken: " + request.getUserName());
 			throw new UserAlreadyExistsException(request.getUserName());
 		}
 
 		User user = new User();
-		user.setUsername(request.getUserName());
+		user.setUserName(request.getUserName());
 		user.setPassword(request.getPassword());
 		user.setFirstName(request.getFirstName());
 		user.setLastName(request.getLastName());
@@ -60,7 +65,7 @@ public class UserService {
 	}
 	
 	public User validateUser(LoginRequest request) {
-        Optional<User> user = userRepository.findByUsername(request.getUserName());
+        Optional<User> user = userRepository.findByUserName(request.getUserName());
         if (user.isPresent() && passwordEncoder.matches(request.getPassword(), user.get().getPassword())) {
         	return user.get();
         }

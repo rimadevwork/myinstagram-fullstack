@@ -11,7 +11,7 @@ import com.myinsta.user.entity.User;
  */
 public interface UserRepository extends MongoRepository<User, String>{
 
-	Optional<User> findByUsername(String username);
+	Optional<User> findByUserName(String userName);
 	
 	Optional<User> findByUuid(String uuid);
 	
