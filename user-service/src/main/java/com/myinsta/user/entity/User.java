@@ -6,6 +6,9 @@ import java.util.UUID;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 @Document(collection = "users")
 public class User {
 

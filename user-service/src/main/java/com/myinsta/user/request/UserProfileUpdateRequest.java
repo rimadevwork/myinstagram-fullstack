@@ -6,6 +6,9 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 public class UserProfileUpdateRequest {
 
 	  	@NotBlank(message = "Username is required")

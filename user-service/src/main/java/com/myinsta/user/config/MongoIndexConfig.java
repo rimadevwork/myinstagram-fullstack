@@ -7,6 +7,9 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.index.IndexOperations;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 @Configuration
 public class MongoIndexConfig {
 

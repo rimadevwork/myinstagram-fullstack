@@ -1,5 +1,8 @@
 package com.myinsta.user.request;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 public class LoginRequest {
 
 	private String userName;

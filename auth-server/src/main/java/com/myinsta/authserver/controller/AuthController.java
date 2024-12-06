@@ -16,58 +16,54 @@ import com.myinsta.authserver.service.TokenService;
 
 import jakarta.validation.Valid;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
+
 @RestController
-@RequestMapping("/api//auth")
+@RequestMapping("/api/auth")
 public class AuthController {
-
 	
-    private final RestTemplate restTemplate;  // HTTP client to call User Service
-   
-    private final ClientService clientService;
+	// HTTP client to call User Service
+	private final RestTemplate restTemplate; 
 
-    private final TokenService tokenService;
+	private final ClientService clientService;
 
-    public AuthController(RestTemplate restTemplate, ClientService clientService, TokenService tokenService) {
-    	this.restTemplate = restTemplate;
-    	this.clientService = clientService;
-    	this.tokenService = tokenService;
-    }
-    
-    @PostMapping("/token")
-    public ResponseEntity<?> getToken(@Valid @RequestBody AuthRequest authRequest) {
-    	
-    	 if (!clientService.validateClient(authRequest.getClientId(), authRequest.getClientSecret())) {
-    	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid client credentials");
-    	    }
-    	 
-    	// Forward credentials to User Service
-    	    ResponseEntity<Map> response = restTemplate.postForEntity(
-    	            "http://user-service/users/validate",
-    	            Map.of("username", authRequest.getUsername(), "password", authRequest.getPassword()),
-    	            Map.class
-    	    );
-    	    
-    	    if (response.getStatusCode() == HttpStatus.OK) {
-    	        // User validated successfully
-    	        Map<String, Object> userDetails = response.getBody();
+	private final TokenService tokenService;
 
-    	        // Generate tokens
-    	        String accessToken = tokenService.generateAccessToken(userDetails);
-    	        String refreshToken = tokenService.generateRefreshToken(userDetails);
+	public AuthController(RestTemplate restTemplate, ClientService clientService, TokenService tokenService) {
+		this.restTemplate = restTemplate;
+		this.clientService = clientService;
+		this.tokenService = tokenService;
+	}
 
-    	        // Return tokens
-    	        return ResponseEntity.ok(Map.of(
-    	            "access_token", accessToken,
-    	            "refresh_token", refreshToken,
-    	            "token_type", "Bearer",
-    	            "expires_in", 3600
-    	        ));
-    	    } else {
-    	        // Invalid credentials
-    	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
-    	    }
+	@PostMapping("/token")
+	public ResponseEntity<?> getToken(@Valid @RequestBody AuthRequest authRequest) {
 
-    }
+		if (!clientService.validateClient(authRequest.getClientId(), authRequest.getClientSecret())) {
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid client credentials");
+		}
 
-    	
+		// Forward credentials to User Service
+		ResponseEntity<Map> response = restTemplate.postForEntity("http://user-service/users/validate",
+				Map.of("username", authRequest.getUsername(), "password", authRequest.getPassword()), Map.class);
+
+		if (response.getStatusCode() == HttpStatus.OK) {
+			// User validated successfully
+			Map<String, Object> userDetails = response.getBody();
+
+			// Generate tokens
+			String accessToken = tokenService.generateAccessToken(userDetails);
+			String refreshToken = tokenService.generateRefreshToken(userDetails);
+
+			// Return tokens
+			return ResponseEntity.ok(Map.of("access_token", accessToken, "refresh_token", refreshToken, "token_type",
+					"Bearer", "expires_in", 3600));
+		} else {
+			// Invalid credentials
+			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
+		}
+
+	}
+
 }

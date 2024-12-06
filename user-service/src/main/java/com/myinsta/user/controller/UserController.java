@@ -19,6 +19,9 @@ import com.myinsta.user.request.UserProfileUpdateRequest;
 import com.myinsta.user.request.UserRegistrationRequest;
 import com.myinsta.user.service.UserService;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 @RestController
 @RequestMapping("/api/users")
 public class UserController {

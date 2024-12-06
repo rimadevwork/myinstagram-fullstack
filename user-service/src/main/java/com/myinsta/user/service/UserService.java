@@ -16,6 +16,9 @@ import com.myinsta.user.request.LoginRequest;
 import com.myinsta.user.request.UserProfileUpdateRequest;
 import com.myinsta.user.request.UserRegistrationRequest;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 @Service
 public class UserService {
 

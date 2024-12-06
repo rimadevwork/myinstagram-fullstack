@@ -7,15 +7,22 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
-	// Configure the HTTP Security (CORS, CSRF, session management, etc.)
+	/*
+	 *  Configure the HTTP Security (CORS, CSRF, session management, etc.)
+	 */
 	@Bean
 	public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 		return httpSecurity.csrf(csrf -> csrf.disable()).authorizeHttpRequests(
-				auth -> auth.requestMatchers("/api/users/**").permitAll().anyRequest().authenticated()).build();
+				auth -> auth.requestMatchers("/api/users/hello", "/api/users/register", "/api/users/validateUser").permitAll()
+				//.requestMatchers("/api/users/updateProfile").hasRole("ROLE_USER")
+				.anyRequest().authenticated()).build();
 	}
 
 	@Bean

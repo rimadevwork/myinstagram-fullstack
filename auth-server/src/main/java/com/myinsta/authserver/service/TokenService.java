@@ -9,6 +9,11 @@ import java.util.Date;
 import java.util.Map;
 import java.util.HashMap;
 
+
+/**
+ * @author rima.devwork@gmail.com 
+ */
+
 /**
  * Responsible for generating both access tokens and refresh tokens.
  * Since we are not using third-party OAuth providers and are implementing our own Authorization Server, 

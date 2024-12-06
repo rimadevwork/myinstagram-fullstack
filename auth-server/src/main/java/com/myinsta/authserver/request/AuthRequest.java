@@ -2,6 +2,10 @@ package com.myinsta.authserver.request;
 
 import jakarta.validation.constraints.NotBlank;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
+
 public class AuthRequest {
 
     @NotBlank(message = "Username is required")

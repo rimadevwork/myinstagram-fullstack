@@ -2,6 +2,10 @@ package com.myinsta.authserver.service;
 
 import org.springframework.stereotype.Service;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
+
 @Service
 public class ClientService {
 

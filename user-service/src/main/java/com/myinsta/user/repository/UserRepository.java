@@ -6,6 +6,9 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.myinsta.user.entity.User;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 public interface UserRepository extends MongoRepository<User, String>{
 
 	Optional<User> findByUsername(String username);

@@ -5,6 +5,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * @author rima.devwork@gmail.com 
+ */
 @Configuration
 public class AuthorizationServerConfig {
 
